@@ -1,16 +1,18 @@
 
 import { useState } from 'react'
 
-const App = () => {
 
+const Login = ({handleLogin}) => {
+  
+
+  
 
   const [email , setEmail] = useState('')
   const [password , setPassword] = useState('')
 
 const submitHandler = (e) =>{
-  e.preventDefault()
-console.log(`Email is ${email} and password is ${password}`);
-
+e.preventDefault()
+handleLogin(email,password)
 setEmail('')
 setPassword('')
 
@@ -51,4 +53,4 @@ setPassword('')
   )
 }
 
-export default App
+export default Login
